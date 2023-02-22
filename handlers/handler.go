@@ -29,6 +29,7 @@ func QrCodeCallBack(uuid string) {
 	} else {
 		log.Println("login in linux")
 		url := "https://login.weixin.qq.com/l/" + uuid
+    log.Printf(url)
 		log.Printf("如果二维码无法扫描，请缩小控制台尺寸，或更换命令行工具，缩小二维码像素")
 		q, _ := qrcode.New(url, qrcode.High)
 		fmt.Println(q.ToSmallString(true))
